@@ -107,7 +107,8 @@ db_1=> SELECT * FROM users;
   4 | dan     | 101112   | Hello, i am dan  
   5 | eve     | 131415   | Hello, i am eve  
   6 | faythe  | 161718   | Hello, i am faythe  
-(6 rows)` 
+(6 rows)
+```
   
   
 ## 6  
@@ -120,7 +121,7 @@ db_1=> SELECT * FROM users ORDER BY id DESC LIMIT 2;
 ----+--------+----------+--------------------  
   6 | faythe | 161718   | Hello, i am faythe  
   5 | eve    | 131415   | Hello, i am eve  
-(2 rows)  
+(2 rows)
 ```
   
   
@@ -128,7 +129,8 @@ db_1=> SELECT * FROM users ORDER BY id DESC LIMIT 2;
 Afficher toutes les lignes de la table "users" dont les "id" sont impairs par ordre croissant.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> SELECT * FROM users WHERE id % 2 = 1;  
+```
+db_1=> SELECT * FROM users WHERE id % 2 = 1;  
  id |  name   | password |         bio  
 ----+---------+----------+---------------------  
   1 | alice   | 123      | Hello, i am alice  
