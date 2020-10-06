@@ -15,14 +15,18 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
   
 ```postgres=> CREATE DATABASE db_1;
 CREATE DATABASE
+
 postgres=> \c db_1;
 You are now connected to database "db_1" as user "db_user".
+
 db_1=> CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30), password VARCHAR(
 30));
 CREATE TABLE
+
 db_1=> INSERT INTO users (name, password) VALUES ('alice', '123'), ('bob', '456'), ('
 charlie', '789');
 INSERT 0 3
+
 db_1=> SELECT * FROM users;
  id |  name   | password
 ----+---------+----------
