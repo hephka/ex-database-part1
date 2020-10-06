@@ -146,9 +146,9 @@ Effacer la TABLE "users".
 Effacer la DATABASE "db_1".  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-`db_1=> DROP TABLE users;  
-DROP TABLE  
-db_1=> \c postgres  
-You are now connected to database "postgres" as user "db_user".  
-postgres=> DROP DATABASE db_1;  
-DROP DATABASE  `
+```db_1=> DROP TABLE users;
+DROP TABLE
+db_1=> \c postgres
+You are now connected to database "postgres" as user "db_user".
+postgres=> DROP DATABASE db_1;
+DROP DATABASE```
