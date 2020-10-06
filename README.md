@@ -39,7 +39,8 @@ Ajouter 3 utilisateurs 'dan', 'eve', 'faythe' qui auront respectivement les pass
 Affichez toutes les lignes de la table "users" de la base de donnée "db_1".  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> INSERT INTO users (name, password) VALUES ('dan', '101112'), ('eve', '131415')
+```
+db_1=> INSERT INTO users (name, password) VALUES ('dan', '101112'), ('eve', '131415')
 , ('faythe', '161718');  
 INSERT 0 3  
 db_1=> SELECT * FROM users;  
@@ -59,7 +60,8 @@ db_1=> SELECT * FROM users;
 Affichez toutes les lignes de la table "users" de la base de donnée "db_1" dont le password possède plus de 3 caractères. Pour cela il vous faudra utiliser la fonction LENGTH.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> SELECT * FROM users WHERE Length(password) > 3;  
+```
+db_1=> SELECT * FROM users WHERE Length(password) > 3;  
  id |  name  | password  
 ----+--------+----------  
   4 | dan    | 101112  
@@ -73,7 +75,8 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 Modifiez la table "users" afin d'ajouter une nouvelle colonne "bio" qui contiendra une description a propos de l'utilisateur. Ce champ "bio" sera du texte avec un nombre de caractères illimités et sa valeur par défaut sera "Hello, world!".  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';  
+```
+db_1=> ALTER TABLE users ADD COLUMN bio TEXT DEFAULT 'Hello, world!';  
 ALTER TABLE  
  id |  name   | password |      bio  
 ----+---------+----------+---------------  
@@ -92,7 +95,8 @@ Modifiez toutes les lignes existantes pour que la "bio" de chacun affiche, "Hell
 Il faudra remplacer PRENOM_DU_USER par le véritable login de l'utilisateur.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> UPDATE users SET bio = Concat('Hello, i am ', name);  
+```
+db_1=> UPDATE users SET bio = Concat('Hello, i am ', name);  
 UPDATE 6  
 db_1=> SELECT * FROM users;  
  id |  name   | password |         bio  
@@ -110,7 +114,8 @@ db_1=> SELECT * FROM users;
 Afficher les 2 lignes qui ont les "id" les plus grands par ordre décroissant.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> SELECT * FROM users ORDER BY id DESC LIMIT 2;  
+```
+db_1=> SELECT * FROM users ORDER BY id DESC LIMIT 2;  
  id |  name  | password |        bio  
 ----+--------+----------+--------------------  
   6 | faythe | 161718   | Hello, i am faythe  
@@ -123,20 +128,22 @@ Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces
 Afficher toutes les lignes de la table "users" dont les "id" sont impairs par ordre croissant.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-`db_1=> SELECT * FROM users WHERE id % 2 = 1;  
+```db_1=> SELECT * FROM users WHERE id % 2 = 1;  
  id |  name   | password |         bio  
 ----+---------+----------+---------------------  
   1 | alice   | 123      | Hello, i am alice  
   3 | charlie | 789      | Hello, i am charlie  
   5 | eve     | 131415   | Hello, i am eve  
-(3 rows)  `
+(3 rows)  
+```
   
   
 ## 8  
 Effacez toutes les lignes de la table "users dont les "id" sont pairs. Affichez toutes les lignes de la table users.  
 Vous devrez fournir les commandes SQL entrées ainsi que tous les outputs de ces commandes.  
   
-```db_1=> DELETE FROM users WHERE id % 2 = 0;  
+```
+db_1=> DELETE FROM users WHERE id % 2 = 0;  
 DELETE 3  
 db_1=> SELECT * FROM users;  
  id |  name   | password |         bio  
